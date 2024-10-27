@@ -6,7 +6,7 @@ function Clock() {
   const [description, setDescription] = useState("");
   const [message, setMessage] = useState("");
 
-  // Update clock every second
+  // Updating  the clock every second
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();

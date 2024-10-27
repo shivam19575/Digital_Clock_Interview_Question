@@ -29,7 +29,7 @@ function CheckTime() {
     }
   };
 
-  // Start the countdown timer for each entry
+  // Start the countdown timer for each entry and update the countdown timer accordingly.
   const startCountdown = (initialTimers) => {
     Object.keys(initialTimers).forEach((description) => {
       const interval = setInterval(() => {
@@ -39,7 +39,7 @@ function CheckTime() {
             newTimers[description] -= 1;
           } else {
             clearInterval(interval);
-            // Update status to show "Time over" when countdown ends
+            // Update status to show "Time over" when countdown ends else show the countdown status.
             setStatusMessages((prevMessages) =>
               prevMessages.map((msg) =>
                 msg.description === description
