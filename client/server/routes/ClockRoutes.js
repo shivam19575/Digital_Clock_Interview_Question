@@ -14,26 +14,7 @@ router.post('/save', async (req, res) => {
   }
 });
 
-// Route to check if time is reached or over
-// router.get('/check', async (req, res) => {
-//   const currentTime = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-//   try {
-//     const records = await Clock.find();
-//     const response = records.map(record => {
-//       if (record.time <= currentTime && !record.isTriggered) {
-//         record.isTriggered = true;
-//         record.save();
-//         return `Time reached for "${record.description}"`;
-//       } else if (record.isTriggered) {
-//         return `Time already over for "${record.description}"`;
-//       }
-//       return `Time not yet reached for "${record.description}"`;
-//     });
-//     res.status(200).json(response);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to check time status' });
-//   }
-// });
+
 router.get('/check', async (req, res) => {
   const now = new Date();
 
